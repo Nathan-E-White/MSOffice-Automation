@@ -1,0 +1,34 @@
+{
+  "name": "MSOffice-Automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ScriptTab.html",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "preinstall": "pnpm init;",
+    "install": "pnpm install;",
+    "build": "",
+    "deploy": "",
+    "test": "",
+    "lint": "",
+    "debug": "",
+    "style": "pnpm run prettier;",
+    "prettier-list": "./node_modules/.bin/prettier --list-different \"./**/*.@(ts|tsx|js|jsx|html)\"",
+    "prettier": "./node_modules/.bin/prettier --write \"./**/*.@(ts|tsx|js|jsx|html)\""
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.12",
+    "@types/semver": "^7.3.12",
+    "@types/core-js": "^2.5.5",
+    "@types/office-js": "^1.0.272",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "@microsoft/office-js": "^1.1.78",
+    "@microsoft/office-js-helpers": "^1.0.2",
+    "core-js": "^3.24.1",
+    "typescript": "^4.7.4"
+  }
+}

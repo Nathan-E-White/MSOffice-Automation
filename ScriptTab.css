@@ -1,0 +1,17 @@
+
+
+section.samples {
+    margin-top: 20px;
+}
+
+section.samples .ms-Button, section.setup .ms-Buton {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    min-width: 80px;
+}
+
+.equation {
+    font-family: stix, sans-serif;
+    font-size: 16px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Automation</title>
+    <link rel="stylesheet" type="text/css" href="ScriptTab.css"/>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+</head>
+<body>
+<h3>Applicant Information</h3>
+<form name="SenderName">
+    <fieldset>
+        <legend>Name</legend>
+    </fieldset>
+</form>
+
+<h3>Target Company</h3>
+<form name="CompanyName">
+    <fieldset>
+        <legend>Company Name</legend>
+    </fieldset>
+</form>
+<form name="DivisionName">
+    <fieldset>
+        <legend>Division Name</legend>
+    </fieldset>
+</form>
+<form name="HQAddress">
+    <fieldset>
+        <legend>HQ Address</legend>
+        <label>primary address number: <input type="number"/></label>
+        <label>predirectional<input type="text"/></label>
+        <label>street name<input type="text"/></label>
+        <label>suffix<input type="text"/></label>
+        <label>postdirectional<input type="text"/></label>
+        <label>secondary address identifier<input type="text"/></label>
+        <label>secondary address<input type="text"/></label>
+    </fieldset>
+</form>
+
+
+<h3>Recruiter Information</h3>
+
+<form name="RecipientTitle"
+      action="https://localhost:80/api/recipient_title"
+      enctype="multipart/form-data"
+      method="post"
+      autocomplete="off"
+      target="_self"
+>
+    <fieldset>
+        <legend>Title</legend>
+        <label><input type="radio" name="Mr">Mr.</label>
+        <label><input type="radio" name="Ms">Ms.</label>
+        <label><input type="radio" name="Mrs">Mrs.</label>
+        <label><input type="radio" name="Dr">Dr.</label>
+        <label><input type="radio" name="Prof">Prof.</label>
+        <button id="RecipientTitleSubmit"
+                class="ms-Button-label"
+                type="submit"
+        >
+            Save
+        </button>
+        <button id="RecipientTitleClear"
+                class="ms-Button-label"
+                type="reset"
+        >X
+        </button>
+    </fieldset>
+</form>
+
+<form name="RecipientName"
+      action="https://localhost:80/api/recipient_name"
+      enctype="multipart/form-data"
+      method="post"
+      autocomplete="off"
+      target="_self"
+>
+    <fieldset>
+        <legend>Name</legend>
+        <label>
+            First:
+            <input name="submitted-first-name" type="text"/>
+        </label>
+        <label>
+            Last:
+            <input name="submitted-last-name" type="text"/>
+        </label>
+
+        <button id="RecipientNameSubmit"
+                class="ms-Button-label"
+                type="submit"
+        >
+            Save
+        </button>
+        <button id="RecipientNameClear"
+                class="ms-Button-label"
+                type="reset"
+        >X
+        </button>
+    </fieldset>
+</form>
+
+<form>
+    <fieldset>
+        <legend>Company Role</legend>
+    </fieldset>
+</form>
+
+<form>
+    <fieldset>
+        <legend>Address</legend>
+    </fieldset>
+</form>
+
+<br><hr>
+
+<h2>Formatted Letter:</h2>
+<article>
+    <address>
+
+    </address>
+
+</article>
+
+
+</body>
+
+</html>
